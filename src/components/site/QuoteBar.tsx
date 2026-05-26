@@ -5,8 +5,8 @@ export function QuoteBar() {
   const [loading, setLoading] = useState(false);
   return (
     <section className="relative max-w-6xl mx-auto px-4 -mt-10 md:-mt-16 z-20 premium-fade-in">
-      <div className="rounded-2xl p-6 md:p-7 shadow-2xl" style={{ background: "#f5efe2" }}>
-        <div className="flex items-center gap-2 mb-5 text-[#3b4a2b]">
+      <div className="rounded-2xl p-6 md:p-7 shadow-2xl glass border border-border">
+        <div className="flex items-center gap-2 mb-5 text-primary">
           <Leaf className="w-4 h-4" />
           <span className="text-[13px] font-medium tracking-tight">Solicitar Cotação de Frete Gratuita</span>
         </div>
@@ -28,7 +28,7 @@ export function QuoteBar() {
             f.type === "select" ? (
               <select
                 key={f.ph}
-                className="bg-white text-[#1a1a1a] text-[13px] rounded-md px-3 py-2.5 border border-[#d9d2c0] focus:outline-none focus:border-[#3b4a2b]"
+                className="bg-surface text-foreground text-[13px] rounded-md px-3 py-2.5 border border-border focus:outline-none focus:border-primary transition"
                 defaultValue=""
               >
                 <option value="" disabled>{f.ph}</option>
@@ -39,16 +39,16 @@ export function QuoteBar() {
                 key={f.ph}
                 type={f.type}
                 placeholder={f.ph}
-                className="bg-white text-[#1a1a1a] text-[13px] placeholder:text-neutral-400 rounded-md px-3 py-2.5 border border-[#d9d2c0] focus:outline-none focus:border-[#3b4a2b]"
+                className="bg-surface text-foreground text-[13px] placeholder:text-muted-foreground rounded-md px-3 py-2.5 border border-border focus:outline-none focus:border-primary transition"
               />
             )
           )}
           <button
             type="submit"
-            className="md:col-span-5 mt-1 bg-black text-white rounded-full py-3 text-[13px] font-medium hover:bg-black/85 transition flex items-center justify-center gap-2"
+            className="md:col-span-5 mt-1 bg-primary text-primary-foreground rounded-full py-3 text-[13px] font-medium hover:bg-primary/90 transition flex items-center justify-center gap-2"
           >
             {loading ? (
-              <span className="inline-block w-4 h-4 rounded-full border-2 border-white/40 border-t-white animate-spin" />
+              <span className="inline-block w-4 h-4 rounded-full border-2 border-primary-foreground/40 border-t-primary-foreground animate-spin" />
             ) : null}
             {loading ? "Calculando..." : "Calcular Frete Instantâneo"}
           </button>
