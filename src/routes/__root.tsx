@@ -72,18 +72,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "JCN Prime is a premium logistics platform offering advanced transport management and real-time tracking." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "JCN Prime is a premium logistics platform offering advanced transport management and real-time tracking." },
+      { title: "JCN Transportes | Frete Dedicado e Fracionado — Campinas/SP" },
+      { name: "description", content: "JCN Transportes: frete dedicado, fracionado e redespacho para todo o Brasil. Sede em Campinas/SP, rede com mais de 9 mil motoristas." },
+      { name: "author", content: "JCN Transportes" },
+      { property: "og:site_name", content: "JCN Transportes" },
+      { property: "og:title", content: "JCN Transportes | Frete Dedicado e Fracionado — Campinas/SP" },
+      { property: "og:description", content: "Frete dedicado, fracionado e redespacho para todo o Brasil. Cotação rápida, prazo real e equipe que responde. Campinas/SP." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "JCN Prime is a premium logistics platform offering advanced transport management and real-time tracking." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/prlMGz8bwtX0IdSFrebYhOJkiwf1/social-images/social-1779834335405-foto-perfil.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/prlMGz8bwtX0IdSFrebYhOJkiwf1/social-images/social-1779834335405-foto-perfil.webp" },
+      { property: "og:locale", content: "pt_BR" },
+      { property: "og:image", content: "https://jcnstats.lovable.app/og-image.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "JCN Transportes | Frete Dedicado e Fracionado — Campinas/SP" },
+      { name: "twitter:description", content: "Frete dedicado, fracionado e redespacho para todo o Brasil. Campinas/SP." },
+      { name: "twitter:image", content: "https://jcnstats.lovable.app/og-image.jpg" },
     ],
     links: [
       {
@@ -98,11 +99,100 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "https://jcnstats.lovable.app/#organization",
+      "name": "JCN Transportes",
+      "url": "https://jcnstats.lovable.app",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://jcnstats.lovable.app/logo.png",
+        "width": 200,
+        "height": 80
+      },
+      "description": "Transportadora com sede em Campinas/SP, especializada em frete dedicado, fracionado e redespacho para todo o Brasil.",
+      "foundingDate": "2023",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Alcides Modesto de Camargo, 390 — Sala C",
+        "addressLocality": "Campinas",
+        "addressRegion": "SP",
+        "postalCode": "13064-030",
+        "addressCountry": "BR"
+      },
+      "telephone": "+55-19-99003-8302",
+      "email": "ouvidoria@jcntransportes.com.br",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "serviceType": ["Frete Dedicado", "Frete Fracionado", "Redespacho", "Frete Aéreo", "Frete Marítimo"],
+      "sameAs": [
+        "https://wa.me/5519990038302"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jcnstats.lovable.app/#website",
+      "url": "https://jcnstats.lovable.app",
+      "name": "JCN Transportes",
+      "description": "Frete dedicado, fracionado e redespacho para todo o Brasil. Sede em Campinas/SP.",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://jcnstats.lovable.app/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://jcnstats.lovable.app/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quais modalidades de frete a JCN Transportes oferece?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A JCN Transportes oferece frete dedicado, frete fracionado, redespacho, frete aéreo e frete marítimo, atendendo todo o território nacional."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Onde fica a sede da JCN Transportes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nossa sede está localizada em Campinas, SP — R. Alcides Modesto de Camargo, 390, Sala C, Parque Santa Bárbara, CEP 13.064-030."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como solicitar uma cotação de frete?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Você pode solicitar uma cotação gratuita pelo site, pelo WhatsApp (19) 99003-8302 ou pelo e-mail ouvidoria@jcntransportes.com.br. Respondemos em até 2 horas úteis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A JCN Transportes atende todo o Brasil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Com uma rede de mais de 9 mil motoristas autônomos cadastrados, a JCN Transportes realiza coletas e entregas em todo o território nacional."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+        />
       </head>
       <body>
         {children}

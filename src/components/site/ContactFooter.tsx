@@ -1,11 +1,13 @@
+import logo from "@/assets/logo.png";
+
 export function ContactFooter() {
   return (
     <section id="contato" className="relative pt-24 pb-12 mt-8" style={{ background: "oklch(0.18 0.05 250)" }}>
       <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
-      <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 premium-fade-in">
+      <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 md:gap-16 premium-fade-in">
         <div>
           <p className="text-[11px] tracking-[0.18em] uppercase text-primary mb-4">Diagnóstico de frota</p>
-          <h2 className="text-[34px] md:text-[44px] leading-[1.08] text-foreground max-w-md">
+          <h2 className="text-[26px] md:text-[44px] leading-[1.08] text-foreground max-w-md">
             Pronto para redefinir sua eficiência operacional?
           </h2>
           <p className="mt-5 text-[14px] text-muted-foreground max-w-md leading-relaxed">
@@ -15,7 +17,7 @@ export function ContactFooter() {
           <dl className="mt-10 space-y-4 text-[13px]">
             <div>
               <dt className="text-muted-foreground">Sede operacional</dt>
-              <dd className="text-foreground">Av. das Nações Unidas, 12.901 — São Paulo / SP</dd>
+              <dd className="text-foreground">R. Alcides Modesto de Camargo, 390 — Sala C<br />Parque Santa Bárbara — Campinas / SP — CEP 13.064-030</dd>
             </div>
             <div>
               <dt className="text-muted-foreground">Ouvidoria de cargas</dt>
@@ -23,7 +25,9 @@ export function ContactFooter() {
             </div>
             <div>
               <dt className="text-muted-foreground">Central comercial</dt>
-              <dd className="text-foreground">+55 11 4002-8922</dd>
+              <dd className="text-foreground">
+                <a href="tel:+5519990038302" className="hover:text-primary transition-colors">+55 19 99003-8302</a>
+              </dd>
             </div>
           </dl>
         </div>
@@ -68,22 +72,23 @@ export function ContactFooter() {
             type="submit"
             className="w-full bg-primary text-primary-foreground font-semibold tracking-tight text-[14px] py-4 rounded-md hover:brightness-110 transition"
           >
-            Iniciar Diagnóstico de Frota
+            Quero me tornar parceiro.
           </button>
         </form>
       </div>
 
       <div className="relative max-w-6xl mx-auto px-6 mt-20 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-[12px] text-muted-foreground">
-        <div className="flex items-center gap-2">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <path d="M3 6l6 6-6 6M11 6l6 6-6 6" stroke="var(--cyan)" strokeWidth="2.2" strokeLinecap="round"/>
-          </svg>
-          <span>© {new Date().getFullYear()} JCN Transportes. Todos os direitos reservados.</span>
+        <div className="flex flex-col gap-1">
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="JCN Transportes" loading="lazy" className="h-6 w-auto object-contain opacity-70" />
+            <span>© {new Date().getFullYear()} JCN Transportes. Todos os direitos reservados.</span>
+          </div>
+          <span className="pl-9 text-muted-foreground/50">CNPJ 61.800.528/0001-30 · Fundada em 2023</span>
         </div>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-foreground transition">Termos</a>
-          <a href="#" className="hover:text-foreground transition">Privacidade</a>
-          <a href="#" className="hover:text-foreground transition">LGPD</a>
+          <a href="/termos" className="hover:text-foreground transition">Termos</a>
+          <a href="/privacidade" className="hover:text-foreground transition">Privacidade</a>
+          <a href="/lgpd" className="hover:text-foreground transition">LGPD</a>
         </div>
       </div>
     </section>
