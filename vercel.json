@@ -1,6 +1,4 @@
 {
-  "outputDirectory": "dist/client",
-  "buildCommand": "npm run build",
   "headers": [
     {
       "source": "/(.*)",
@@ -22,6 +20,6 @@
     }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/((?!assets|robots.txt|sitemap.xml|favicon.ico).*)", "destination": "/index.html" }
   ]
 }
