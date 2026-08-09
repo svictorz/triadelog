@@ -4,7 +4,7 @@ export const Route = createFileRoute("/privacidade")({
   component: Privacidade,
   head: () => ({
     meta: [
-      { title: "Política de Privacidade — JCN Transportes" },
+      { title: "Política de Privacidade  -  JCN Transportes" },
       { name: "description", content: "Como a JCN Transportes coleta, usa e protege seus dados pessoais." },
     ],
   }),
@@ -24,12 +24,12 @@ function Privacidade() {
         <h1 className="text-[36px] md:text-[48px] font-bold leading-tight tracking-tight text-foreground mb-4">
           Política de Privacidade
         </h1>
-        <p className="text-muted-foreground text-[14px] mb-12">Última atualização: maio de 2026</p>
+        <p className="text-muted-foreground text-[14px] mb-12">?ltima atualização: maio de 2026</p>
 
         <div className="space-y-10 text-[15px] text-muted-foreground leading-relaxed">
           <section>
             <h2 className="text-[18px] font-semibold text-foreground mb-3">1. Quem somos</h2>
-            <p>A JCN Transportes, com sede na R. Alcides Modesto de Camargo, 390 — Sala C, Parque Santa Bárbara, Campinas/SP, CEP 13.064-030, é responsável pelo tratamento dos dados pessoais coletados em nosso site e em nossas operações comerciais.</p>
+            <p>A JCN Transportes, com sede na R. Alcides Modesto de Camargo, 390  -  Sala C, Parque Santa Bárbara, SP, CEP 13.064-030, é responsável pelo tratamento dos dados pessoais coletados em nosso site e em nossas operações comerciais.</p>
           </section>
 
           <section>
@@ -66,3 +66,4 @@ function Privacidade() {
     </main>
   );
 }
+

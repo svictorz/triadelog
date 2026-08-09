@@ -72,18 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "JCN Transportes | Frete Dedicado e Fracionado — Campinas/SP" },
-      { name: "description", content: "JCN Transportes: frete dedicado, fracionado e redespacho para todo o Brasil. Sede em Campinas/SP, rede com mais de 9 mil motoristas." },
+      { title: "JCN Transportes | Frete Dedicado e Fracionado" },
+      { name: "description", content: "JCN Transportes: frete dedicado, fracionado e redespacho para todo o Brasil. Rede com mais de 9 mil motoristas." },
       { name: "author", content: "JCN Transportes" },
       { property: "og:site_name", content: "JCN Transportes" },
-      { property: "og:title", content: "JCN Transportes | Frete Dedicado e Fracionado — Campinas/SP" },
-      { property: "og:description", content: "Frete dedicado, fracionado e redespacho para todo o Brasil. Cotação rápida, prazo real e equipe que responde. Campinas/SP." },
+      { property: "og:title", content: "JCN Transportes | Frete Dedicado e Fracionado" },
+      { property: "og:description", content: "Frete dedicado, compartilhado e redespacho para todo o Brasil. Atendimento em até 24h úteis e coleta em até 48 horas." },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:image", content: "https://jcnstats.lovable.app/og-image.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "JCN Transportes | Frete Dedicado e Fracionado — Campinas/SP" },
-      { name: "twitter:description", content: "Frete dedicado, fracionado e redespacho para todo o Brasil. Campinas/SP." },
+      { name: "twitter:title", content: "JCN Transportes | Frete Dedicado e Fracionado" },
+      { name: "twitter:description", content: "Frete dedicado, compartilhado e redespacho para todo o Brasil." },
       { name: "twitter:image", content: "https://jcnstats.lovable.app/og-image.jpg" },
     ],
     links: [
@@ -113,12 +113,10 @@ const schemaOrg = {
         "width": 200,
         "height": 80
       },
-      "description": "Transportadora com sede em Campinas/SP, especializada em frete dedicado, fracionado e redespacho para todo o Brasil.",
-      "foundingDate": "2023",
+      "description": "Transportadora com sede em SP, especializada em frete dedicado, fracionado e redespacho para todo o Brasil.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "R. Alcides Modesto de Camargo, 390 — Sala C",
-        "addressLocality": "Campinas",
+        "streetAddress": "R. Alcides Modesto de Camargo, 390  -  Sala C",
         "addressRegion": "SP",
         "postalCode": "13064-030",
         "addressCountry": "BR"
@@ -139,7 +137,7 @@ const schemaOrg = {
       "@id": "https://jcnstats.lovable.app/#website",
       "url": "https://jcnstats.lovable.app",
       "name": "JCN Transportes",
-      "description": "Frete dedicado, fracionado e redespacho para todo o Brasil. Sede em Campinas/SP.",
+      "description": "Frete dedicado, compartilhado e redespacho para todo o Brasil. Cobertura nacional.",
       "inLanguage": "pt-BR",
       "publisher": { "@id": "https://jcnstats.lovable.app/#organization" }
     },
@@ -160,7 +158,7 @@ const schemaOrg = {
           "name": "Onde fica a sede da JCN Transportes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nossa sede está localizada em Campinas, SP — R. Alcides Modesto de Camargo, 390, Sala C, Parque Santa Bárbara, CEP 13.064-030."
+            "text": "Nossa equipe atende operações em todo o Brasil com suporte comercial e acompanhamento de cargas."
           }
         },
         {
@@ -168,7 +166,7 @@ const schemaOrg = {
           "name": "Como solicitar uma cotação de frete?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Você pode solicitar uma cotação gratuita pelo site, pelo WhatsApp (19) 99003-8302 ou pelo e-mail ouvidoria@jcntransportes.com.br. Respondemos em até 2 horas úteis."
+            "text": "Você pode solicitar uma cotação gratuita pelo site, pelo WhatsApp (19) 99003-8302 ou pelo e-mail ouvidoria@jcntransportes.com.br. Respondemos em até 24h úteis e a coleta pode ocorrer em até 48 horas."
           }
         },
         {
@@ -211,3 +209,4 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
+

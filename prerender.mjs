@@ -1,7 +1,7 @@
 /**
  * Prerender SSR: importa o bundle do servidor (CF Worker),
  * faz uma requisição fake para "/" e salva o HTML resultante
- * em dist/client/index.html — para deploy estático na Vercel.
+ * em dist/client/index.html - para deploy estático na Vercel.
  */
 import { existsSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
@@ -41,18 +41,18 @@ try {
 
     if (response && response.ok) {
       html = await response.text();
-      console.log("✓ SSR realizado com sucesso — HTML gerado pelo servidor.");
+      console.log("SSR realizado com sucesso - HTML gerado pelo servidor.");
     } else {
-      console.warn(`⚠ Server respondeu ${response?.status} — usando fallback.`);
+      console.warn(`Server respondeu ${response?.status} - usando fallback.`);
     }
   }
 } catch (err) {
-  console.warn("⚠ Falha ao importar server bundle:", err.message);
+  console.warn("Falha ao importar server bundle:", err.message);
 }
 
 // Fallback: se SSR falhou, gerar HTML com TanStack-compatible shell
 if (!html) {
-  console.log("→ Usando fallback HTML (hydration via CSR)...");
+  console.log("Usando fallback HTML (hydration via CSR)...");
 
   // Ler manifest do client para pegar assets com hashes corretos
   const clientManifestPath = join(__dirname, "dist", "client", ".vite", "manifest.json");
@@ -87,18 +87,18 @@ if (!html) {
   }
 
   // Gerar um HTML que o TanStack Start consegue hidratar:
-  // body vazio + scripts — o router detecta ausência de SSR e faz CSR.
+  // body vazio + scripts - o router detecta ausência de SSR e faz CSR.
   html = `<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JCN Transportes | Frete Dedicado e Fracionado — Campinas/SP</title>
-    <meta name="description" content="JCN Transportes: frete dedicado, fracionado e redespacho para todo o Brasil. Sede em Campinas/SP, rede com mais de 9 mil motoristas. Solicite sua cotação grátis." />
+    <title>JCN Transportes | Frete Dedicado e Fracionado</title>
+    <meta name="description" content="JCN Transportes: frete dedicado, fracionado e redespacho para todo o Brasil. Rede com mais de 9 mil motoristas. Solicite sua cotação grátis." />
     <meta name="robots" content="index, follow" />
-    <meta name="keywords" content="frete dedicado campinas, transportadora campinas, frete fracionado sp, redespacho campinas" />
-    <meta property="og:title" content="JCN Transportes | Frete Dedicado e Fracionado — Campinas/SP" />
-    <meta property="og:description" content="Frete dedicado, fracionado e redespacho para todo o Brasil. Campinas/SP." />
+    <meta name="keywords" content="frete dedicado brasil, transportadora brasil, frete fracionado sp, redespacho brasil" />
+    <meta property="og:title" content="JCN Transportes | Frete Dedicado e Fracionado" />
+    <meta property="og:description" content="Frete dedicado, fracionado e redespacho para todo o Brasil." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <link rel="icon" href="/favicon.ico" />
@@ -111,4 +111,5 @@ if (!html) {
 }
 
 writeFileSync(join(distClient, "index.html"), html, "utf-8");
-console.log("✓ dist/client/index.html salvo.");
+console.log("dist/client/index.html salvo.");
+

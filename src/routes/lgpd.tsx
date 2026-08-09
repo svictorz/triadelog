@@ -4,7 +4,7 @@ export const Route = createFileRoute("/lgpd")({
   component: LGPD,
   head: () => ({
     meta: [
-      { title: "LGPD — JCN Transportes" },
+      { title: "LGPD  -  JCN Transportes" },
       { name: "description", content: "Como a JCN Transportes aplica a Lei Geral de Proteção de Dados (LGPD) em suas operações." },
     ],
   }),
@@ -24,13 +24,13 @@ function LGPD() {
         <h1 className="text-[36px] md:text-[48px] font-bold leading-tight tracking-tight text-foreground mb-4">
           LGPD
         </h1>
-        <p className="text-muted-foreground text-[14px] mb-2">Lei Geral de Proteção de Dados — Lei nº 13.709/2018</p>
-        <p className="text-muted-foreground text-[14px] mb-12">Última atualização: maio de 2026</p>
+        <p className="text-muted-foreground text-[14px] mb-2">Lei Geral de Proteção de Dados - Lei nº 13.709/2018</p>
+        <p className="text-muted-foreground text-[14px] mb-12">?ltima atualização: maio de 2026</p>
 
         <div className="space-y-10 text-[15px] text-muted-foreground leading-relaxed">
           <section>
             <h2 className="text-[18px] font-semibold text-foreground mb-3">1. Nosso compromisso com a LGPD</h2>
-            <p>A JCN Transportes está comprometida com a conformidade à Lei Geral de Proteção de Dados (Lei nº 13.709/2018). Tratamos os dados pessoais de nossos clientes, parceiros e visitantes com transparência, segurança e responsabilidade.</p>
+        <p className="text-muted-foreground text-[14px] mb-2">Lei Geral de Proteção de Dados - Lei nº 13.709/2018</p>
           </section>
 
           <section>
@@ -79,7 +79,7 @@ function LGPD() {
             <div className="mt-4 glass-pro rounded-xl p-5 space-y-2">
               <p><span className="text-foreground font-medium">E-mail:</span> <a href="mailto:ouvidoria@jcntransportes.com.br" className="text-primary hover:underline">ouvidoria@jcntransportes.com.br</a></p>
               <p><span className="text-foreground font-medium">Telefone:</span> <a href="tel:+5519990038302" className="text-primary hover:underline">(19) 99003-8302</a></p>
-              <p><span className="text-foreground font-medium">Endereço:</span> R. Alcides Modesto de Camargo, 390 — Sala C, Parque Santa Bárbara, Campinas/SP</p>
+              <p><span className="text-foreground font-medium">Endereço:</span> R. Alcides Modesto de Camargo, 390  -  Sala C, Parque Santa Bárbara, SP</p>
             </div>
           </section>
 
@@ -97,3 +97,4 @@ function LGPD() {
     </main>
   );
 }
+

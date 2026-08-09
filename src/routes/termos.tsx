@@ -4,7 +4,7 @@ export const Route = createFileRoute("/termos")({
   component: Termos,
   head: () => ({
     meta: [
-      { title: "Termos de Uso — JCN Transportes" },
+      { title: "Termos de Uso  -  JCN Transportes" },
       { name: "description", content: "Termos de uso dos serviços da JCN Transportes." },
     ],
   }),

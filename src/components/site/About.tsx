@@ -1,17 +1,17 @@
-import operator from "@/assets/team.png";
+import operator from "@/assets/about-team-photoroom.png";
 
 const pillars = [
   {
-    t: "Somos de Campinas. Entregamos o Brasil.",
-    d: "A JCN nasceu em Campinas, SP, e atende todo o território nacional. Sabemos que transporte no Brasil não é simples — estradas, burocracia fiscal, janelas de entrega apertadas. Conhecemos cada obstáculo e montamos nossa operação pra lidar com eles no dia a dia.",
+    t: "Cobertura nacional.",
+    d: "Coletas e entregas em todo o Brasil, com operação ajustada ao prazo, volume e destino da sua carga.",
   },
   {
-    t: "Nossa maior entrega é a confiança.",
-    d: "Trabalhamos com uma rede de mais de 9 mil motoristas autônomos cadastrados, frete dedicado e fracionado, e atendimento de quem responde de verdade. Entendemos que cada carga representa o negócio de alguém.",
+    t: "Rede preparada.",
+    d: "Mais de 9 mil motoristas autônomos cadastrados para atender frete dedicado, compartilhado e redespacho.",
   },
   {
-    t: "Compromisso não é slogan, é postura.",
-    d: "Quando você fecha com a JCN, tem um parceiro que acompanha a operação com você. Se algo sair do previsto, você vai saber antes de precisar ligar. Porque acreditamos que transparência e prazo não são diferenciais — são obrigação.",
+    t: "Transparência e prazo são obrigação.",
+    d: "Acompanhamos a operação de perto e avisamos você antes que qualquer imprevisto vire problema.",
   },
 ];
 
@@ -20,68 +20,26 @@ export function About() {
     <section id="quem-somos" className="py-20 md:py-28 premium-fade-in">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 md:gap-14 items-start">
 
-        {/* Imagem — desktop: hexágono com tags absolutas | mobile: retangular sem tags */}
-        <div className="relative flex items-center justify-center">
-          {/* Fundo decorativo — oculto em mobile para evitar overflow */}
-          <div
-            className="hidden md:block absolute w-[92%] h-[92%] bg-surface-elevated opacity-40"
-            style={{
-              clipPath: "polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)",
-              transform: "translate(18px, 18px) rotate(6deg)",
-            }}
+        {/* Imagem  -  desktop: hexágono com tags absolutas | mobile: retangular sem tags */}
+        <div className="relative flex min-h-[360px] items-end justify-center overflow-visible md:min-h-[560px]">
+          <div className="absolute inset-x-8 bottom-8 h-24 rounded-full bg-primary/15 blur-3xl" />
+          <div className="absolute left-1/2 top-1/2 h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
+
+          <img
+            src={operator}
+            alt="Equipe JCN Transportes"
+            width={1024}
+            height={1024}
+            loading="lazy"
+            className="relative z-[2] h-auto w-[112%] max-w-none object-contain drop-shadow-[0_18px_55px_rgba(56,189,248,0.22)] md:w-[122%]"
           />
-
-          {/* Imagem: hexágono no desktop, arredondada no mobile */}
-          <div
-            className="relative overflow-hidden bg-surface w-full"
-            style={{
-              clipPath: "polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%)",
-            }}
-          >
-            <img
-              src={operator}
-              alt="Equipe JCN Transportes"
-              width={1024}
-              height={1024}
-              loading="lazy"
-              className="w-full h-[320px] md:h-[520px] object-cover object-top"
-            />
-          </div>
-          <div className="absolute -inset-3 -z-10 hero-radial blur-3xl" />
-
-          {/* Tags de valor — visíveis só em desktop */}
-          <div className="hidden md:flex absolute top-6 left-2 glass rounded-xl px-6 py-4 items-center gap-3 shadow-xl">
-            <div className="w-3 h-3 rounded-full bg-primary shrink-0" />
-            <span className="text-[15px] font-bold tracking-widest text-foreground uppercase">Prático</span>
-          </div>
-
-          <div className="hidden md:flex absolute top-1/2 right-2 glass rounded-xl px-6 py-4 items-center gap-3 shadow-xl">
-            <div className="w-3 h-3 rounded-full bg-primary shrink-0" />
-            <span className="text-[15px] font-bold tracking-widest text-foreground uppercase">Ágil</span>
-          </div>
-
-          <div className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 glass rounded-xl px-6 py-4 items-center gap-3 shadow-xl">
-            <div className="w-3 h-3 rounded-full bg-primary shrink-0" />
-            <span className="text-[15px] font-bold tracking-widest text-foreground uppercase">Seguro</span>
-          </div>
-
-          {/* Tags de valor — versão mobile: linha de pills abaixo da imagem */}
-          <div className="md:hidden absolute bottom-0 inset-x-0 flex justify-center gap-2 translate-y-1/2">
-            {["Prático", "Ágil", "Seguro"].map((v) => (
-              <div key={v} className="glass rounded-full px-4 py-2 flex items-center gap-2 shadow-lg">
-                <div className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                <span className="text-[12px] font-bold tracking-widest text-foreground uppercase">{v}</span>
-              </div>
-            ))}
-          </div>
         </div>
-
         {/* Texto */}
         <div className="mt-8 md:mt-0">
           <p className="text-[11px] tracking-[0.18em] uppercase text-primary mb-4">Quem somos</p>
           <h2 className="text-[28px] md:text-[44px] leading-[1.08] text-foreground">
-            De Campinas<br /> para qualquer lugar<br />
-            <span className="text-primary">do Brasil.</span>
+            Transparência e prazo<br />
+            <span className="text-primary">são obrigação.</span>
           </h2>
           <ul className="mt-8 md:mt-10 space-y-5 md:space-y-6">
             {pillars.map((p) => (
@@ -120,3 +78,4 @@ export function About() {
     </section>
   );
 }
+

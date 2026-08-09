@@ -14,32 +14,28 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "JCN Transportes | Frete Dedicado e Fracionado — Campinas/SP" },
-      { name: "description", content: "JCN Transportes: frete dedicado, fracionado e redespacho para todo o Brasil. Sede em Campinas/SP, rede com mais de 9 mil motoristas. Solicite sua cotação grátis." },
+      { title: "JCN Transportes | Frete Dedicado e Fracionado" },
+      { name: "description", content: "JCN Transportes: frete dedicado, compartilhado e redespacho com cobertura nacional. Atendimento em até 24h úteis e coleta em até 48 horas." },
       { name: "robots", content: "index, follow" },
-      { name: "keywords", content: "frete dedicado campinas, transportadora campinas, frete fracionado sp, redespacho campinas, cotação de frete, transportadora brasil, JCN transportes" },
+      { name: "keywords", content: "frete dedicado, transportadora, frete fracionado, redespacho, cotação de frete, transportadora brasil, JCN transportes" },
       { name: "author", content: "JCN Transportes" },
       // Open Graph
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://jcnstats.lovable.app/" },
       { property: "og:site_name", content: "JCN Transportes" },
-      { property: "og:title", content: "JCN Transportes | Frete Dedicado e Fracionado — Campinas/SP" },
-      { property: "og:description", content: "Frete dedicado, fracionado e redespacho para todo o Brasil. Cotação rápida, prazo real e equipe que responde. Campinas/SP." },
+      { property: "og:title", content: "JCN Transportes | Frete Dedicado e Fracionado" },
+      { property: "og:description", content: "Frete dedicado, compartilhado e redespacho para todo o Brasil. Atendimento em até 24h úteis e coleta em até 48 horas." },
       { property: "og:image", content: "https://jcnstats.lovable.app/og-image.jpg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:locale", content: "pt_BR" },
       // Twitter Card
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "JCN Transportes | Frete Dedicado e Fracionado — Campinas/SP" },
-      { name: "twitter:description", content: "Frete dedicado, fracionado e redespacho para todo o Brasil. Cotação rápida, prazo real." },
+      { name: "twitter:title", content: "JCN Transportes | Frete Dedicado e Fracionado" },
+      { name: "twitter:description", content: "Frete dedicado, compartilhado e redespacho para todo o Brasil. Atendimento em até 24h úteis." },
       { name: "twitter:image", content: "https://jcnstats.lovable.app/og-image.jpg" },
       // Geo tags (local SEO)
-      { name: "geo.region", content: "BR-SP" },
-      { name: "geo.placename", content: "Campinas" },
-      { name: "geo.position", content: "-22.9071;-47.0633" },
-      { name: "ICBM", content: "-22.9071, -47.0633" },
-      // Canonical
+      { name: "geo.region", content: "BR-SP" },      // Canonical
       { rel: "canonical", href: "https://jcnstats.lovable.app/" },
     ],
   }),
@@ -61,3 +57,4 @@ function Index() {
     </main>
   );
 }
+

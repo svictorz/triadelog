@@ -20,14 +20,12 @@ export function Navbar() {
   return (
     <header className="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
       <nav className="glass rounded-full px-5 py-3 flex items-center gap-5 w-auto max-w-[calc(100vw-2rem)]">
-        {/* Logo */}
         <a href="#" className="flex items-center shrink-0">
           <img src={logo} alt="JCN Logística" className="h-8 w-auto object-contain" />
         </a>
 
         <div className="hidden md:block w-px h-5 bg-border shrink-0" />
 
-        {/* Links desktop */}
         <ul className="hidden md:flex items-center gap-9">
           {links.map((l) => (
             <li key={l.label}>
@@ -44,7 +42,6 @@ export function Navbar() {
 
         <div className="hidden md:block w-px h-5 bg-border shrink-0" />
 
-        {/* CTA desktop */}
         <a
           href="#contato"
           className="hidden md:inline-flex items-center gap-2 text-[13px] font-semibold text-background bg-primary hover:bg-primary/90 transition-colors px-4 py-2 rounded-full whitespace-nowrap"
@@ -52,7 +49,6 @@ export function Navbar() {
           Fale Conosco
         </a>
 
-        {/* Hamburger mobile */}
         <button
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
@@ -65,7 +61,6 @@ export function Navbar() {
         </button>
       </nav>
 
-      {/* Menu mobile dropdown */}
       <div
         className={`md:hidden absolute top-[calc(100%+8px)] inset-x-4 glass rounded-2xl overflow-hidden transition-all duration-200 origin-top ${
           open ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-90 pointer-events-none"

@@ -96,7 +96,7 @@ export function BentoFeatures() {
 
           <FeatureCard
             icon={<Network className="w-3.5 h-3.5" />}
-            title='"Postar em Qualquer Lugar" — Omnichannel'
+            title='"Postar em Qualquer Lugar"  -  Omnichannel'
             desc="APIs abertas que postam ordens em qualquer ERP, CRM ou sistema proprietário, com comunicação nativa e paralela."
             className="md:col-span-2"
           >

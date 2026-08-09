@@ -46,7 +46,7 @@ export function Pricing() {
             <div
               key={p.name}
               className={`relative rounded-2xl border p-8 flex flex-col ${
-                p.highlight ? "border-primary/50 bg-surface-elevated" : "border-border bg-surface"
+                p.highlight  "border-primary/50 bg-surface-elevated" : "border-border bg-surface"
               }`}
             >
               {p.highlight && (
@@ -72,7 +72,7 @@ export function Pricing() {
                 href="#contato"
                 className={`mt-8 text-center text-[13px] py-3 rounded-full transition ${
                   p.highlight
-                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                     "bg-primary text-primary-foreground hover:bg-primary/90"
                     : "border border-border text-foreground hover:bg-surface-elevated"
                 }`}
               >

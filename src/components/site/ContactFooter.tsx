@@ -1,96 +1,80 @@
+import { Instagram, Mail, MapPin, Phone } from "lucide-react";
+
 import logo from "@/assets/logo.png";
+
+const legalLinks = [
+  { href: "/termos", label: "Termos de Uso" },
+  { href: "/privacidade", label: "Política de Privacidade" },
+  { href: "/lgpd", label: "LGPD" },
+];
 
 export function ContactFooter() {
   return (
-    <section id="contato" className="relative pt-24 pb-12 mt-8" style={{ background: "oklch(0.18 0.05 250)" }}>
+    <footer id="contato" className="relative mt-8 overflow-hidden pt-20 pb-10" style={{ background: "oklch(0.18 0.05 250)" }}>
       <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
-      <div className="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 md:gap-16 premium-fade-in">
-        <div>
-          <p className="text-[11px] tracking-[0.18em] uppercase text-primary mb-4">Diagnóstico de frota</p>
-          <h2 className="text-[26px] md:text-[44px] leading-[1.08] text-foreground max-w-md">
-            Pronto para redefinir sua eficiência operacional?
-          </h2>
-          <p className="mt-5 text-[14px] text-muted-foreground max-w-md leading-relaxed">
-            Conte para nosso comitê comercial os gargalos da sua operação. Em 48h enviamos
-            um diagnóstico completo com cenários de otimização de frete.
+
+      <div className="relative mx-auto grid max-w-6xl gap-10 px-6 premium-fade-in md:grid-cols-[1.2fr_1fr_1fr]">
+        <div className="max-w-md">
+          <img src={logo} alt="JCN Transportes" loading="lazy" className="h-10 w-auto object-contain" />
+          <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+            Transporte rodoviário, aéreo, marítimo e redespacho com atendimento nacional para cargas empresariais.
           </p>
-          <dl className="mt-10 space-y-4 text-[13px]">
-            <div>
-              <dt className="text-muted-foreground">Sede operacional</dt>
-              <dd className="text-foreground">R. Alcides Modesto de Camargo, 390 — Sala C<br />Parque Santa Bárbara — Campinas / SP — CEP 13.064-030</dd>
-            </div>
-            <div>
-              <dt className="text-muted-foreground">Ouvidoria de cargas</dt>
-              <dd className="text-foreground">ouvidoria@jcntransportes.com.br</dd>
-            </div>
-            <div>
-              <dt className="text-muted-foreground">Central comercial</dt>
-              <dd className="text-foreground">
-                <a href="tel:+5519990038302" className="hover:text-primary transition-colors">+55 19 99003-8302</a>
-              </dd>
-            </div>
-          </dl>
+          <p className="mt-5 text-xs leading-relaxed text-muted-foreground/70">
+            CNPJ 61.800.528/0001-30
+          </p>
         </div>
 
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className="space-y-8"
-        >
-          {[
-            { label: "Nome do contato", type: "text" },
-            { label: "Cargo na empresa", type: "text" },
-          ].map((f) => (
-            <div key={f.label}>
-              <label className="block text-[11px] uppercase tracking-[0.16em] text-muted-foreground mb-2">{f.label}</label>
-              <input
-                type={f.type}
-                className="w-full bg-transparent border-0 border-b border-border focus:border-primary focus:outline-none py-2 text-[14px] text-foreground transition-colors"
-              />
-            </div>
-          ))}
-          <div>
-            <label className="block text-[11px] uppercase tracking-[0.16em] text-muted-foreground mb-2">
-              Volume mensal estimado de cargas
-            </label>
-            <select className="w-full bg-transparent border-0 border-b border-border focus:border-primary focus:outline-none py-2 text-[14px] text-foreground">
-              <option className="bg-surface">Até 500 entregas</option>
-              <option className="bg-surface">500 a 2.000 entregas</option>
-              <option className="bg-surface">2.000 a 10.000 entregas</option>
-              <option className="bg-surface">Acima de 10.000 entregas</option>
-            </select>
+        <div>
+          <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Contato</h3>
+          <ul className="mt-5 space-y-4 text-sm text-muted-foreground">
+            <li className="flex gap-3">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+              <span>R. Alcides Modesto de Camargo, 390 - Sala C<br />Parque Santa Bárbara - SP - CEP 13.064-030</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <Mail className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+              <a href="mailto:ouvidoria@jcntransportes.com.br" className="transition hover:text-foreground">
+                ouvidoria@jcntransportes.com.br
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Phone className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+              <a href="tel:+5519990038302" className="transition hover:text-foreground">
+                +55 19 99003-8302
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Institucional</h3>
+          <nav className="mt-5 flex flex-col gap-3 text-sm text-muted-foreground" aria-label="Links institucionais">
+            {legalLinks.map((link) => (
+              <a key={link.href} href={link.href} className="transition hover:text-foreground">
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="mt-8">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Redes sociais</h3>
+            <a
+              href="https://www.instagram.com/jcnlogistica/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram da JCN Logística"
+              className="mt-4 inline-flex h-11 w-11 items-center justify-center rounded-full border border-border/70 bg-white/5 text-foreground transition hover:border-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              <Instagram className="h-5 w-5" aria-hidden="true" />
+            </a>
           </div>
-          <div>
-            <label className="block text-[11px] uppercase tracking-[0.16em] text-muted-foreground mb-2">
-              Mensagem / desafio logístico
-            </label>
-            <textarea
-              rows={3}
-              className="w-full bg-transparent border-0 border-b border-border focus:border-primary focus:outline-none py-2 text-[14px] text-foreground resize-none transition-colors"
-            />
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-primary text-primary-foreground font-semibold tracking-tight text-[14px] py-4 rounded-md hover:brightness-110 transition"
-          >
-            Quero me tornar parceiro.
-          </button>
-        </form>
+        </div>
       </div>
 
-      <div className="relative max-w-6xl mx-auto px-6 mt-20 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4 text-[12px] text-muted-foreground">
-        <div className="flex flex-col gap-1">
-          <div className="flex items-center gap-3">
-            <img src={logo} alt="JCN Transportes" loading="lazy" className="h-6 w-auto object-contain opacity-70" />
-            <span>© {new Date().getFullYear()} JCN Transportes. Todos os direitos reservados.</span>
-          </div>
-          <span className="pl-9 text-muted-foreground/50">CNPJ 61.800.528/0001-30 · Fundada em 2023</span>
-        </div>
-        <div className="flex gap-6">
-          <a href="/termos" className="hover:text-foreground transition">Termos</a>
-          <a href="/privacidade" className="hover:text-foreground transition">Privacidade</a>
-          <a href="/lgpd" className="hover:text-foreground transition">LGPD</a>
-        </div>
+      <div className="relative mx-auto mt-12 flex max-w-6xl flex-col gap-3 border-t border-border px-6 pt-6 text-xs text-muted-foreground/70 md:flex-row md:items-center md:justify-between">
+        <span>© {new Date().getFullYear()} JCN Transportes. Todos os direitos reservados.</span>
+        <span>Atendimento e cotações pelos canais oficiais da empresa.</span>
       </div>
-    </section>
+    </footer>
   );
 }
