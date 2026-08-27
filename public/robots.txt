@@ -1,4 +1,28 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jcnstats.lovable.app/sitemap.xml
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: AppleBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://jcntransportes.com/sitemap.xml

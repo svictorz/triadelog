@@ -33,8 +33,8 @@ export function ContactFooter() {
             </li>
             <li className="flex items-center gap-3">
               <Mail className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-              <a href="mailto:ouvidoria@jcntransportes.com.br" className="transition hover:text-foreground">
-                ouvidoria@jcntransportes.com.br
+              <a href="mailto:comercial@jcntransportes.com" className="transition hover:text-foreground">
+                comercial@jcntransportes.com
               </a>
             </li>
             <li className="flex items-center gap-3">

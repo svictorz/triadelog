@@ -80,11 +80,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:description", content: "Frete dedicado, compartilhado e redespacho para todo o Brasil. Atendimento em até 24h úteis e coleta em até 48 horas." },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
-      { property: "og:image", content: "https://jcnstats.lovable.app/og-image.jpg" },
+      { property: "og:image", content: "https://jcntransportes.com/logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "JCN Transportes | Frete Dedicado e Fracionado" },
       { name: "twitter:description", content: "Frete dedicado, compartilhado e redespacho para todo o Brasil." },
-      { name: "twitter:image", content: "https://jcnstats.lovable.app/og-image.jpg" },
+      { name: "twitter:image", content: "https://jcntransportes.com/logo.png" },
     ],
     links: [
       {
@@ -104,12 +104,12 @@ const schemaOrg = {
   "@graph": [
     {
       "@type": ["Organization", "LocalBusiness"],
-      "@id": "https://jcnstats.lovable.app/#organization",
+      "@id": "https://jcntransportes.com/#organization",
       "name": "JCN Transportes",
-      "url": "https://jcnstats.lovable.app",
+      "url": "https://jcntransportes.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://jcnstats.lovable.app/logo.png",
+        "url": "https://jcntransportes.com/logo.png",
         "width": 200,
         "height": 80
       },
@@ -122,7 +122,7 @@ const schemaOrg = {
         "addressCountry": "BR"
       },
       "telephone": "+55-19-99003-8302",
-      "email": "ouvidoria@jcntransportes.com.br",
+      "email": "comercial@jcntransportes.com",
       "areaServed": {
         "@type": "Country",
         "name": "Brasil"
@@ -134,23 +134,23 @@ const schemaOrg = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://jcnstats.lovable.app/#website",
-      "url": "https://jcnstats.lovable.app",
+      "@id": "https://jcntransportes.com/#website",
+      "url": "https://jcntransportes.com",
       "name": "JCN Transportes",
       "description": "Frete dedicado, compartilhado e redespacho para todo o Brasil. Cobertura nacional.",
       "inLanguage": "pt-BR",
-      "publisher": { "@id": "https://jcnstats.lovable.app/#organization" }
+      "publisher": { "@id": "https://jcntransportes.com/#organization" }
     },
     {
       "@type": "FAQPage",
-      "@id": "https://jcnstats.lovable.app/#faq",
+      "@id": "https://jcntransportes.com/#faq",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "Quais modalidades de frete a JCN Transportes oferece?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A JCN Transportes oferece frete dedicado, frete fracionado, redespacho, frete aéreo e frete marítimo, atendendo todo o território nacional."
+            "text": "A JCN Transportes oferece frete dedicado, frete compartilhado, redespacho, frete aéreo e frete marítimo para cargas empresariais em todo o Brasil."
           }
         },
         {
@@ -158,7 +158,7 @@ const schemaOrg = {
           "name": "Onde fica a sede da JCN Transportes?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nossa equipe atende operações em todo o Brasil com suporte comercial e acompanhamento de cargas."
+            "text": "A JCN Transportes fica na R. Alcides Modesto de Camargo, 390 - Sala C, Parque Santa Bárbara, em Campinas, SP."
           }
         },
         {
@@ -166,7 +166,7 @@ const schemaOrg = {
           "name": "Como solicitar uma cotação de frete?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Você pode solicitar uma cotação gratuita pelo site, pelo WhatsApp (19) 99003-8302 ou pelo e-mail ouvidoria@jcntransportes.com.br. Respondemos em até 24h úteis e a coleta pode ocorrer em até 48 horas."
+            "text": "Você pode solicitar uma cotação pelo site, pelo WhatsApp (19) 99003-8302 ou pelo e-mail comercial@jcntransportes.com."
           }
         },
         {
@@ -174,7 +174,7 @@ const schemaOrg = {
           "name": "A JCN Transportes atende todo o Brasil?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sim. Com uma rede de mais de 9 mil motoristas autônomos cadastrados, a JCN Transportes realiza coletas e entregas em todo o território nacional."
+            "text": "Sim. A JCN Transportes realiza coletas e entregas em todo o território nacional com rede de motoristas cadastrados e acompanhamento de ponta a ponta."
           }
         }
       ]
@@ -209,4 +209,6 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
+
+
 

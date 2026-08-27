@@ -5,6 +5,7 @@ import { QuoteBar } from "@/components/site/QuoteBar";
 import { LogosStrip } from "@/components/site/LogosStrip";
 import { FreightTypes } from "@/components/site/FreightTypes";
 import { About } from "@/components/site/About";
+import { AiSearchFaq } from "@/components/site/AiSearchFaq";
 import { ContactFooter } from "@/components/site/ContactFooter";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { useReveal } from "@/hooks/use-reveal";
@@ -21,11 +22,11 @@ export const Route = createFileRoute("/")({
       { name: "author", content: "JCN Transportes" },
       // Open Graph
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://jcnstats.lovable.app/" },
+      { property: "og:url", content: "https://jcntransportes.com/" },
       { property: "og:site_name", content: "JCN Transportes" },
       { property: "og:title", content: "JCN Transportes | Frete Dedicado e Fracionado" },
       { property: "og:description", content: "Frete dedicado, compartilhado e redespacho para todo o Brasil. Atendimento em até 24h úteis e coleta em até 48 horas." },
-      { property: "og:image", content: "https://jcnstats.lovable.app/og-image.jpg" },
+      { property: "og:image", content: "https://jcntransportes.com/logo.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:locale", content: "pt_BR" },
@@ -33,10 +34,10 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "JCN Transportes | Frete Dedicado e Fracionado" },
       { name: "twitter:description", content: "Frete dedicado, compartilhado e redespacho para todo o Brasil. Atendimento em até 24h úteis." },
-      { name: "twitter:image", content: "https://jcnstats.lovable.app/og-image.jpg" },
+      { name: "twitter:image", content: "https://jcntransportes.com/logo.png" },
       // Geo tags (local SEO)
       { name: "geo.region", content: "BR-SP" },      // Canonical
-      { rel: "canonical", href: "https://jcnstats.lovable.app/" },
+      { rel: "canonical", href: "https://jcntransportes.com/" },
     ],
   }),
 });
@@ -52,9 +53,12 @@ function Index() {
       <LogosStrip />
       <FreightTypes />
       <About />
+      <AiSearchFaq />
       <ContactFooter />
       <WhatsAppButton />
     </main>
   );
 }
+
+
 
