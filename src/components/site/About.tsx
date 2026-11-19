@@ -22,8 +22,8 @@ export function About() {
 
         {/* Imagem  -  desktop: hexágono com tags absolutas | mobile: retangular sem tags */}
         <div className="relative flex min-h-[360px] items-end justify-center overflow-visible md:min-h-[560px]">
-          <div className="absolute inset-x-8 bottom-8 h-24 rounded-full bg-primary/15 blur-3xl" />
-          <div className="absolute left-1/2 top-1/2 h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
+          <div className="absolute inset-x-8 bottom-8 h-24 rounded-full bg-navy/10 blur-3xl" />
+          <div className="absolute left-1/2 top-1/2 h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-navy/[0.07] blur-3xl" />
 
           <img
             src={operator}
@@ -31,15 +31,15 @@ export function About() {
             width={1024}
             height={1024}
             loading="lazy"
-            className="relative z-[2] h-auto w-[112%] max-w-none object-contain drop-shadow-[0_18px_55px_rgba(56,189,248,0.22)] md:w-[122%]"
+            className="relative z-[2] h-auto w-[112%] max-w-none object-contain drop-shadow-[0_18px_55px_rgba(255,118,0,0.20)] md:w-[122%]"
           />
         </div>
         {/* Texto */}
         <div className="mt-8 md:mt-0">
-          <p className="text-[11px] tracking-[0.18em] uppercase text-primary mb-4">Quem somos</p>
+          <p className="text-[11px] tracking-[0.18em] uppercase text-primary-text mb-4">Quem somos</p>
           <h2 className="text-[28px] md:text-[44px] leading-[1.08] text-foreground">
             Transparência e prazo<br />
-            <span className="text-primary">são obrigação.</span>
+            <span className="text-primary-text">são obrigação.</span>
           </h2>
           <ul className="mt-8 md:mt-10 space-y-5 md:space-y-6">
             {pillars.map((p) => (
@@ -54,7 +54,7 @@ export function About() {
           <div className="mt-8 md:mt-10 pt-6 md:pt-8 border-t border-border flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <a
               href="#contato"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-[14px] font-semibold text-background bg-primary hover:bg-primary/90 transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-[14px] font-semibold text-primary-foreground bg-primary hover:bg-primary/90 transition-colors duration-200"
             >
               Solicitar cotação agora
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">

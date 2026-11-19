@@ -1,17 +1,13 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-@import "@fontsource/manrope/400.css";
-@import "@fontsource/manrope/600.css";
-@import "@fontsource/manrope/700.css";
-@import "@fontsource/manrope/800.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-display: "Urbanist", system-ui, sans-serif;
+  --font-sans: "Poppins", system-ui, sans-serif;
+  --font-display: "Poppins", system-ui, sans-serif;
   --radius-sm: 4px;
   --radius-md: 6px;
   --radius-lg: 10px;
@@ -25,6 +21,7 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-primary-text: var(--primary-text);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
@@ -36,38 +33,42 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-cyan: var(--cyan);
   --color-surface: var(--surface);
   --color-surface-elevated: var(--surface-elevated);
   --color-footer: var(--footer);
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
 }
 
 :root {
   --radius: 0.625rem;
-  /* Canvas / brand */
-  --background: oklch(0.21 0.06 250);          /* #031424 */
-  --surface: oklch(0.255 0.055 245);           /* #051b2e */
-  --surface-elevated: oklch(0.29 0.06 245);
-  --footer: oklch(0.18 0.05 250);              /* #020b14 */
-  --foreground: oklch(1 0 0);
-  --card: oklch(0.255 0.055 245);
-  --card-foreground: oklch(1 0 0);
-  --popover: oklch(0.255 0.055 245);
-  --popover-foreground: oklch(1 0 0);
-  --primary: oklch(0.78 0.15 235);             /* #38bdf8 cyan */
-  --primary-foreground: oklch(0.18 0.05 250);
-  --secondary: oklch(0.29 0.06 245);
-  --secondary-foreground: oklch(1 0 0);
-  --muted: oklch(0.29 0.06 245);
-  --muted-foreground: oklch(0.82 0.04 230);    /* #b0cddb */
-  --accent: oklch(0.78 0.15 235);
-  --accent-foreground: oklch(0.18 0.05 250);
-  --destructive: oklch(0.6 0.22 25);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.35 0.07 245);              /* #0b3152 */
-  --input: oklch(0.35 0.07 245);
-  --ring: oklch(0.78 0.15 235);
-  --cyan: oklch(0.78 0.15 235);
+  /* TriadeLog Brasil — manual de identidade visual v1.0 */
+  --navy: #0b1530;                 /* Azul-marinho: confiança, segurança, profissionalismo */
+  --navy-foreground: #ffffff;
+  --background: #ffffff;           /* Página */
+  --surface: #f8f8f8;              /* Branco da paleta: clareza, organização */
+  --surface-elevated: #ffffff;
+  --footer: #0b1530;
+  --foreground: #0b1530;
+  --card: #ffffff;
+  --card-foreground: #0b1530;
+  --popover: #ffffff;
+  --popover-foreground: #0b1530;
+  --primary: #ff7600;              /* Laranja: energia, agilidade, movimento */
+  --primary-foreground: #0b1530;
+  --primary-text: #b54d00;         /* mesmo laranja, escurecido para texto sobre branco (4,9:1) */
+  --secondary: #f8f8f8;
+  --secondary-foreground: #0b1530;
+  --muted: #f1f3f5;
+  --muted-foreground: #475569;
+  --accent: #ff7600;
+  --accent-foreground: #0b1530;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e2e5e9;
+  --input: #d8dce1;
+  --ring: #ff7600;
+  --cyan: #ff7600;                 /* token legado (gráficos) → laranja da marca */
 }
 
 @layer base {
@@ -93,27 +94,23 @@
       linear-gradient(to bottom, color-mix(in oklab, var(--border) 100%, transparent) 1px, transparent 1px);
     background-size: 64px 64px;
     background-position: -1px -1px;
-    opacity: 0.08;
+    opacity: 0.5;
   }
   .glass {
-    background: color-mix(in oklab, var(--surface) 50%, transparent);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid color-mix(in oklab, var(--border) 80%, transparent);
+    background: color-mix(in oklab, #ffffff 80%, transparent);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 30px color-mix(in oklab, var(--navy) 8%, transparent);
   }
   .glass-pro {
-    background: linear-gradient(
-      145deg,
-      color-mix(in oklab, var(--surface-elevated) 70%, transparent) 0%,
-      color-mix(in oklab, var(--surface) 40%, transparent) 100%
-    );
-    backdrop-filter: blur(32px) saturate(180%);
-    -webkit-backdrop-filter: blur(32px) saturate(180%);
-    border: 1px solid color-mix(in oklab, white 12%, transparent);
+    background: color-mix(in oklab, #ffffff 94%, transparent);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid var(--border);
     box-shadow:
-      inset 0 1px 0 color-mix(in oklab, white 18%, transparent),
-      inset 0 -1px 0 color-mix(in oklab, black 20%, transparent),
-      0 8px 32px color-mix(in oklab, black 30%, transparent);
+      0 1px 0 0 color-mix(in oklab, #ffffff 90%, transparent),
+      0 24px 60px color-mix(in oklab, var(--navy) 12%, transparent);
   }
   .premium-fade-in {
     opacity: 0;
@@ -125,10 +122,10 @@
     transform: translateY(0);
   }
   .hero-radial {
-    background: radial-gradient(ellipse 80% 60% at 50% 40%, color-mix(in oklab, var(--cyan) 18%, transparent), transparent 70%);
+    background: radial-gradient(ellipse 80% 60% at 50% 40%, color-mix(in oklab, var(--primary) 7%, transparent), transparent 70%);
   }
   .hero-radial-left {
-    background: radial-gradient(ellipse 70% 70% at 20% 50%, color-mix(in oklab, var(--cyan) 14%, transparent), transparent 70%);
+    background: radial-gradient(ellipse 70% 70% at 20% 50%, color-mix(in oklab, var(--primary) 6%, transparent), transparent 70%);
   }
   .marquee {
     animation: marquee 40s linear infinite;
@@ -142,8 +139,8 @@
     50% { transform: translateY(-10px); }
   }
   @keyframes glow-pulse {
-    0%, 100% { box-shadow: 0 0 10px 2px color-mix(in oklab, var(--cyan) 30%, transparent); }
-    50% { box-shadow: 0 0 24px 6px color-mix(in oklab, var(--cyan) 60%, transparent); }
+    0%, 100% { box-shadow: 0 0 10px 2px color-mix(in oklab, var(--primary) 30%, transparent); }
+    50% { box-shadow: 0 0 24px 6px color-mix(in oklab, var(--primary) 60%, transparent); }
   }
   .circle-float {
     animation: float 3.5s ease-in-out infinite, glow-pulse 3.5s ease-in-out infinite;

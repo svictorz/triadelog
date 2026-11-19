@@ -89,7 +89,7 @@ export function FreightTypes() {
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mx-auto mb-5 h-[3px] w-12 bg-primary" />
-          <p className="mb-4 text-[12px] font-semibold uppercase tracking-[0.24em] text-primary">
+          <p className="mb-4 text-[12px] font-semibold uppercase tracking-[0.24em] text-primary-text">
             Soluções logísticas
           </p>
           <h2 className="text-[32px] font-bold leading-tight text-foreground md:text-[48px]">
@@ -119,7 +119,7 @@ export function FreightTypes() {
                 className={`group relative h-[390px] w-[76vw] max-w-[310px] shrink-0 snap-center overflow-hidden rounded-[10px] text-left shadow-2xl shadow-black/25 ring-1 transition-all duration-300 ease-out lg:h-[390px] lg:w-auto lg:max-w-none lg:flex-1 ${
                   isActive
                     ? "z-10 scale-100 opacity-100 ring-primary/90 shadow-primary/20 lg:scale-[1.06]"
-                    : "scale-[0.9] opacity-70 ring-white/12 hover:opacity-100 hover:ring-primary/70 lg:scale-100 lg:opacity-100 lg:hover:z-20 lg:hover:scale-[1.1]"
+                    : "scale-[0.9] opacity-70 ring-black/10 hover:opacity-100 hover:ring-primary/70 lg:scale-100 lg:opacity-100 lg:hover:z-20 lg:hover:scale-[1.1]"
                 }`}
               >
                 <img
@@ -148,7 +148,7 @@ export function FreightTypes() {
         <div className="mt-2 flex justify-center lg:mt-8">
           <a
             href="#contato"
-            className="inline-flex min-h-12 items-center justify-center rounded-xl bg-primary px-8 text-[14px] font-semibold text-background shadow-lg shadow-black/20 transition-colors hover:bg-primary/90"
+            className="inline-flex min-h-12 items-center justify-center rounded-xl bg-primary px-8 text-[14px] font-semibold text-primary-foreground shadow-lg shadow-black/20 transition-colors hover:bg-primary/90"
           >
             Solicitar cotação
           </a>

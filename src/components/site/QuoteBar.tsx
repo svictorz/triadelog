@@ -119,10 +119,10 @@ export function QuoteBar() {
     <section id="contato" className="relative max-w-6xl mx-auto px-4 -mt-10 md:-mt-16 z-20 premium-fade-in">
       <div className="rounded-2xl p-6 md:p-7 glass-pro">
         <div className="mb-6 text-center">
-          <p className="text-[11px] font-semibold tracking-widest uppercase text-primary mb-1">Cotação Grátis</p>
+          <p className="text-[11px] font-semibold tracking-widest uppercase text-primary-text mb-1">Cotação Grátis</p>
           <h2 className="text-[22px] md:text-[28px] font-bold text-foreground leading-tight tracking-tight">
             Solicite sua cotação agora<br />
-            <span className="text-primary">sem custo e sem compromisso.</span>
+            <span className="text-primary-text">sem custo e sem compromisso.</span>
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-[13px] leading-relaxed text-muted-foreground md:text-[15px]">
             Receba atendimento em até <span className="text-foreground">24h úteis</span> e coleta em até <span className="text-foreground">48 horas</span>.
@@ -133,7 +133,7 @@ export function QuoteBar() {
           <div className="py-6 text-center">
             <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/15 mb-3">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M5 13l4 4L19 7" stroke="var(--color-primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M5 13l4 4L19 7" stroke="var(--color-primary-text)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             <p className="text-[15px] font-semibold text-foreground">Cotação pronta para envio no WhatsApp.</p>
@@ -148,7 +148,7 @@ export function QuoteBar() {
                 setDestino("");
                 setErrors({});
               }}
-              className="mt-4 text-[12px] text-primary underline underline-offset-2"
+              className="mt-4 text-[12px] text-primary-text underline underline-offset-2"
             >
               Enviar nova cotação
             </button>
@@ -158,13 +158,13 @@ export function QuoteBar() {
             <div className="flex flex-col gap-1">
               <label htmlFor="origem" className={labelClass}>Origem</label>
               <input id="origem" name="origem" type="text" placeholder="Cidade ou CEP de origem" value={origem} onChange={(e) => setOrigem(e.target.value)} maxLength={80} className={inputClass} />
-              {errors.origem && <span className="text-[11px] text-red-400">{errors.origem}</span>}
+              {errors.origem && <span className="text-[11px] text-red-600">{errors.origem}</span>}
             </div>
 
             <div className="flex flex-col gap-1">
               <label htmlFor="destino" className={labelClass}>Destino</label>
               <input id="destino" name="destino" type="text" placeholder="Cidade ou CEP de destino" value={destino} onChange={(e) => setDestino(e.target.value)} maxLength={80} className={inputClass} />
-              {errors.destino && <span className="text-[11px] text-red-400">{errors.destino}</span>}
+              {errors.destino && <span className="text-[11px] text-red-600">{errors.destino}</span>}
             </div>
 
             <button type="submit" className="self-end bg-primary text-primary-foreground rounded-full px-6 py-3 text-[13px] font-medium hover:bg-primary/90 transition">
@@ -178,18 +178,18 @@ export function QuoteBar() {
             <div>
               <div className="mb-3 flex items-center justify-between gap-3">
                 <h3 className="text-[18px] font-bold text-foreground tracking-normal">Detalhes do transporte</h3>
-                <button type="button" onClick={() => setStep(1)} className="text-[12px] font-medium text-primary underline underline-offset-4">Alterar rota</button>
+                <button type="button" onClick={() => setStep(1)} className="text-[12px] font-medium text-primary-text underline underline-offset-4">Alterar rota</button>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div className="flex flex-col gap-1">
                   <label className={labelClass}>Origem</label>
                   <input type="text" value={origem} readOnly className={readOnlyClass} />
-                  {errors.origem && <span className="text-[11px] text-red-400">{errors.origem}</span>}
+                  {errors.origem && <span className="text-[11px] text-red-600">{errors.origem}</span>}
                 </div>
                 <div className="flex flex-col gap-1">
                   <label className={labelClass}>Destino</label>
                   <input type="text" value={destino} readOnly className={readOnlyClass} />
-                  {errors.destino && <span className="text-[11px] text-red-400">{errors.destino}</span>}
+                  {errors.destino && <span className="text-[11px] text-red-600">{errors.destino}</span>}
                 </div>
               </div>
             </div>
@@ -197,45 +197,45 @@ export function QuoteBar() {
             <div>
               <h3 className="mb-3 text-[18px] font-bold text-foreground tracking-normal">Dados da carga</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
-                <div className="flex flex-col gap-1"><label htmlFor="quantidade" className={labelClass}>Quantidade</label><input id="quantidade" name="quantidade" type="text" placeholder="Ex: 2" maxLength={20} autoComplete="off" className={inputClass} />{errors.quantidade && <span className="text-[11px] text-red-400">{errors.quantidade}</span>}</div>
-                <div className="flex flex-col gap-1"><label htmlFor="peso" className={labelClass}>Peso (Kg)</label><input id="peso" name="peso" type="text" placeholder="Ex: 250,00" maxLength={20} autoComplete="off" className={inputClass} />{errors.peso && <span className="text-[11px] text-red-400">{errors.peso}</span>}</div>
-                <div className="flex flex-col gap-1"><label htmlFor="cubagem" className={labelClass}>Cubagem (m3) <span className="text-muted-foreground font-normal">opcional</span></label><input id="cubagem" name="cubagem" type="text" placeholder="Ex: 1,20" maxLength={20} autoComplete="off" className={inputClass} />{errors.cubagem && <span className="text-[11px] text-red-400">{errors.cubagem}</span>}</div>
-                <div className="flex flex-col gap-1"><label htmlFor="pesoCubico" className={labelClass}>Peso Cúbico (Kg) <span className="text-muted-foreground font-normal">opcional</span></label><input id="pesoCubico" name="pesoCubico" type="text" placeholder="Ex: 400,00" maxLength={20} autoComplete="off" className={inputClass} />{errors.pesoCubico && <span className="text-[11px] text-red-400">{errors.pesoCubico}</span>}</div>
-                <div className="flex flex-col gap-1"><label htmlFor="valorNota" className={labelClass}>Valor de Nota</label><input id="valorNota" name="valorNota" type="text" placeholder="Ex: 3.500,00" maxLength={30} autoComplete="off" className={inputClass} />{errors.valorNota && <span className="text-[11px] text-red-400">{errors.valorNota}</span>}</div>
+                <div className="flex flex-col gap-1"><label htmlFor="quantidade" className={labelClass}>Quantidade</label><input id="quantidade" name="quantidade" type="text" placeholder="Ex: 2" maxLength={20} autoComplete="off" className={inputClass} />{errors.quantidade && <span className="text-[11px] text-red-600">{errors.quantidade}</span>}</div>
+                <div className="flex flex-col gap-1"><label htmlFor="peso" className={labelClass}>Peso (Kg)</label><input id="peso" name="peso" type="text" placeholder="Ex: 250,00" maxLength={20} autoComplete="off" className={inputClass} />{errors.peso && <span className="text-[11px] text-red-600">{errors.peso}</span>}</div>
+                <div className="flex flex-col gap-1"><label htmlFor="cubagem" className={labelClass}>Cubagem (m3) <span className="text-muted-foreground font-normal">opcional</span></label><input id="cubagem" name="cubagem" type="text" placeholder="Ex: 1,20" maxLength={20} autoComplete="off" className={inputClass} />{errors.cubagem && <span className="text-[11px] text-red-600">{errors.cubagem}</span>}</div>
+                <div className="flex flex-col gap-1"><label htmlFor="pesoCubico" className={labelClass}>Peso Cúbico (Kg) <span className="text-muted-foreground font-normal">opcional</span></label><input id="pesoCubico" name="pesoCubico" type="text" placeholder="Ex: 400,00" maxLength={20} autoComplete="off" className={inputClass} />{errors.pesoCubico && <span className="text-[11px] text-red-600">{errors.pesoCubico}</span>}</div>
+                <div className="flex flex-col gap-1"><label htmlFor="valorNota" className={labelClass}>Valor de Nota</label><input id="valorNota" name="valorNota" type="text" placeholder="Ex: 3.500,00" maxLength={30} autoComplete="off" className={inputClass} />{errors.valorNota && <span className="text-[11px] text-red-600">{errors.valorNota}</span>}</div>
               </div>
             </div>
 
             <div>
               <h3 className="mb-3 text-[18px] font-bold text-foreground tracking-normal">Itens</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                <div className="flex flex-col gap-1"><label htmlFor="itemQuantidade" className={labelClass}>Quantidade do item</label><input id="itemQuantidade" name="itemQuantidade" type="text" placeholder="Ex: 2" maxLength={20} autoComplete="off" className={inputClass} />{errors.itemQuantidade && <span className="text-[11px] text-red-400">{errors.itemQuantidade}</span>}</div>
-                <div className="flex flex-col gap-1"><label htmlFor="altura" className={labelClass}>Altura (cm)</label><input id="altura" name="altura" type="text" placeholder="Ex: 60" maxLength={20} autoComplete="off" className={inputClass} />{errors.altura && <span className="text-[11px] text-red-400">{errors.altura}</span>}</div>
-                <div className="flex flex-col gap-1"><label htmlFor="largura" className={labelClass}>Largura (cm)</label><input id="largura" name="largura" type="text" placeholder="Ex: 80" maxLength={20} autoComplete="off" className={inputClass} />{errors.largura && <span className="text-[11px] text-red-400">{errors.largura}</span>}</div>
-                <div className="flex flex-col gap-1"><label htmlFor="comprimento" className={labelClass}>Comprimento (cm)</label><input id="comprimento" name="comprimento" type="text" placeholder="Ex: 120" maxLength={20} autoComplete="off" className={inputClass} />{errors.comprimento && <span className="text-[11px] text-red-400">{errors.comprimento}</span>}</div>
+                <div className="flex flex-col gap-1"><label htmlFor="itemQuantidade" className={labelClass}>Quantidade do item</label><input id="itemQuantidade" name="itemQuantidade" type="text" placeholder="Ex: 2" maxLength={20} autoComplete="off" className={inputClass} />{errors.itemQuantidade && <span className="text-[11px] text-red-600">{errors.itemQuantidade}</span>}</div>
+                <div className="flex flex-col gap-1"><label htmlFor="altura" className={labelClass}>Altura (cm)</label><input id="altura" name="altura" type="text" placeholder="Ex: 60" maxLength={20} autoComplete="off" className={inputClass} />{errors.altura && <span className="text-[11px] text-red-600">{errors.altura}</span>}</div>
+                <div className="flex flex-col gap-1"><label htmlFor="largura" className={labelClass}>Largura (cm)</label><input id="largura" name="largura" type="text" placeholder="Ex: 80" maxLength={20} autoComplete="off" className={inputClass} />{errors.largura && <span className="text-[11px] text-red-600">{errors.largura}</span>}</div>
+                <div className="flex flex-col gap-1"><label htmlFor="comprimento" className={labelClass}>Comprimento (cm)</label><input id="comprimento" name="comprimento" type="text" placeholder="Ex: 120" maxLength={20} autoComplete="off" className={inputClass} />{errors.comprimento && <span className="text-[11px] text-red-600">{errors.comprimento}</span>}</div>
               </div>
             </div>
 
             <div className="flex flex-col gap-1">
               <label htmlFor="observacoes" className={labelClass}>Observações</label>
               <textarea id="observacoes" name="observacoes" placeholder="Ex: 2 volumes embalados em madeira&#10;Carga sem empilhamento&#10;Coleta em horário comercial" maxLength={1200} rows={5} className="min-h-28 resize-y bg-surface text-foreground text-[13px] placeholder:text-muted-foreground rounded-md px-3 py-2.5 border border-border focus:outline-none focus:border-primary transition" />
-              {errors.observacoes && <span className="text-[11px] text-red-400">{errors.observacoes}</span>}
+              {errors.observacoes && <span className="text-[11px] text-red-600">{errors.observacoes}</span>}
             </div>
 
             <div>
               <h3 className="mb-3 text-[18px] font-bold text-foreground tracking-normal">Dados para contato</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                <div className="flex flex-col gap-1"><label htmlFor="nome" className={labelClass}>Nome</label><input id="nome" name="nome" type="text" placeholder="Digite o nome" maxLength={100} autoComplete="off" className={inputClass} />{errors.nome && <span className="text-[11px] text-red-400">{errors.nome}</span>}</div>
-                <div className="flex flex-col gap-1"><label htmlFor="tel" className={labelClass}>WhatsApp</label><input id="tel" name="tel" type="tel" placeholder="Digite o WhatsApp" maxLength={20} autoComplete="off" className={inputClass} />{errors.tel && <span className="text-[11px] text-red-400">{errors.tel}</span>}</div>
-                <div className="flex flex-col gap-1"><label htmlFor="email" className={labelClass}>E-mail</label><input id="email" name="email" type="email" placeholder="email@exemplo.com" maxLength={150} autoComplete="off" className={inputClass} />{errors.email && <span className="text-[11px] text-red-400">{errors.email}</span>}</div>
+                <div className="flex flex-col gap-1"><label htmlFor="nome" className={labelClass}>Nome</label><input id="nome" name="nome" type="text" placeholder="Digite o nome" maxLength={100} autoComplete="off" className={inputClass} />{errors.nome && <span className="text-[11px] text-red-600">{errors.nome}</span>}</div>
+                <div className="flex flex-col gap-1"><label htmlFor="tel" className={labelClass}>WhatsApp</label><input id="tel" name="tel" type="tel" placeholder="Digite o WhatsApp" maxLength={20} autoComplete="off" className={inputClass} />{errors.tel && <span className="text-[11px] text-red-600">{errors.tel}</span>}</div>
+                <div className="flex flex-col gap-1"><label htmlFor="email" className={labelClass}>E-mail</label><input id="email" name="email" type="email" placeholder="email@exemplo.com" maxLength={150} autoComplete="off" className={inputClass} />{errors.email && <span className="text-[11px] text-red-600">{errors.email}</span>}</div>
               </div>
             </div>
 
             <div className="flex flex-col gap-1">
               <label className="flex items-start gap-2 text-[12px] text-muted-foreground">
-                <input name="termos" type="checkbox" className="mt-0.5 h-4 w-4 rounded border-border bg-surface accent-primary" />
-                <span>Li e concordo com os Termos de Uso e a Política de Privacidade. <a href="/termos" className="text-primary underline underline-offset-2">Leia aqui</a></span>
+                <input name="termos" type="checkbox" className="mt-0.5 h-4 w-4 rounded border-border bg-surface accent-primary-text" />
+                <span>Li e concordo com os Termos de Uso e a Política de Privacidade. <a href="/termos" className="text-primary-text underline underline-offset-2">Leia aqui</a></span>
               </label>
-              {errors.termos && <span className="text-[11px] text-red-400">{errors.termos}</span>}
+              {errors.termos && <span className="text-[11px] text-red-600">{errors.termos}</span>}
             </div>
 
             <button type="submit" disabled={loading} className="w-full md:w-auto min-w-72 bg-primary text-primary-foreground rounded-md px-6 py-3 text-[13px] font-semibold uppercase hover:bg-primary/90 disabled:opacity-60 transition flex items-center justify-center gap-2">

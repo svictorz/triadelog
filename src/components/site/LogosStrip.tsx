@@ -86,8 +86,8 @@ export function LogosStrip() {
 
       <div className="mx-auto mt-8 flex max-w-6xl items-center justify-center px-4 md:mt-10">
         <div className="inline-flex flex-wrap items-center justify-center gap-3 rounded-full border border-primary/25 bg-primary/5 px-6 py-4 text-center text-sm font-medium text-foreground shadow-sm sm:px-7 sm:text-base">
-          <span className="h-3 w-3 rounded-full bg-primary shadow-[0_0_18px_hsl(var(--primary)/0.7)] animate-pulse" />
-          <span className="text-2xl font-bold text-primary md:text-3xl">+2.000</span>
+          <span className="h-3 w-3 rounded-full bg-primary shadow-[0_0_18px_rgba(255,118,0,0.45)] animate-pulse" />
+          <span className="text-2xl font-bold text-primary-text md:text-3xl">+2.000</span>
           <span className="text-muted-foreground">parceiros atendidos em todo o Brasil</span>
         </div>
       </div>

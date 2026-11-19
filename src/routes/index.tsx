@@ -15,16 +15,16 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "JCN Transportes | Frete Dedicado e Fracionado" },
+      { title: "TriadeLog Brasil | Frete Dedicado e Fracionado" },
       { name: "description", content: "JCN Transportes: frete dedicado, compartilhado e redespacho com cobertura nacional. Atendimento em até 24h úteis e coleta em até 48 horas." },
       { name: "robots", content: "index, follow" },
       { name: "keywords", content: "frete dedicado, transportadora, frete fracionado, redespacho, cotação de frete, transportadora brasil, JCN transportes" },
-      { name: "author", content: "JCN Transportes" },
+      { name: "author", content: "TriadeLog Brasil" },
       // Open Graph
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://jcntransportes.com/" },
-      { property: "og:site_name", content: "JCN Transportes" },
-      { property: "og:title", content: "JCN Transportes | Frete Dedicado e Fracionado" },
+      { property: "og:site_name", content: "TriadeLog Brasil" },
+      { property: "og:title", content: "TriadeLog Brasil | Frete Dedicado e Fracionado" },
       { property: "og:description", content: "Frete dedicado, compartilhado e redespacho para todo o Brasil. Atendimento em até 24h úteis e coleta em até 48 horas." },
       { property: "og:image", content: "https://jcntransportes.com/logo.png" },
       { property: "og:image:width", content: "1200" },
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/")({
       { property: "og:locale", content: "pt_BR" },
       // Twitter Card
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "JCN Transportes | Frete Dedicado e Fracionado" },
+      { name: "twitter:title", content: "TriadeLog Brasil | Frete Dedicado e Fracionado" },
       { name: "twitter:description", content: "Frete dedicado, compartilhado e redespacho para todo o Brasil. Atendimento em até 24h úteis." },
       { name: "twitter:image", content: "https://jcntransportes.com/logo.png" },
       // Geo tags (local SEO)

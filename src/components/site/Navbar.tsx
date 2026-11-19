@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/triadelog-logo.png";
 
 const links = [
   { label: "Soluções", href: "#solucoes" },
@@ -21,7 +21,10 @@ export function Navbar() {
     <header className="fixed top-4 inset-x-0 z-50 flex justify-center px-4">
       <nav className="glass rounded-full px-5 py-3 flex items-center gap-5 w-auto max-w-[calc(100vw-2rem)]">
         <a href="#" className="flex items-center shrink-0">
-          <img src={logo} alt="JCN Logística" className="h-8 w-auto object-contain" />
+          {/* Versão positiva do manual: wordmark branco sobre a placa azul-marinho */}
+          <span className="flex items-center rounded-lg bg-navy px-2.5 py-1.5">
+            <img src={logo} alt="TriadeLog Brasil" className="h-5 w-auto object-contain" />
+          </span>
         </a>
 
         <div className="hidden md:block w-px h-5 bg-border shrink-0" />
@@ -44,7 +47,7 @@ export function Navbar() {
 
         <a
           href="#contato"
-          className="hidden md:inline-flex items-center gap-2 text-[13px] font-semibold text-background bg-primary hover:bg-primary/90 transition-colors px-4 py-2 rounded-full whitespace-nowrap"
+          className="hidden md:inline-flex items-center gap-2 text-[13px] font-semibold text-primary-foreground bg-primary hover:bg-primary/90 transition-colors px-4 py-2 rounded-full whitespace-nowrap"
         >
           Fale Conosco
         </a>
@@ -72,7 +75,7 @@ export function Navbar() {
               <a
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block px-6 py-4 text-[15px] text-muted-foreground hover:text-foreground hover:bg-white/5 transition-colors border-b border-border/40 last:border-0"
+                className="block px-6 py-4 text-[15px] text-muted-foreground hover:text-foreground hover:bg-surface transition-colors border-b border-border/40 last:border-0"
               >
                 {l.label}
               </a>
@@ -82,7 +85,7 @@ export function Navbar() {
             <a
               href="#contato"
               onClick={() => setOpen(false)}
-              className="flex items-center justify-center gap-2 w-full text-[14px] font-semibold text-background bg-primary hover:bg-primary/90 transition-colors px-4 py-3 rounded-full"
+              className="flex items-center justify-center gap-2 w-full text-[14px] font-semibold text-primary-foreground bg-primary hover:bg-primary/90 transition-colors px-4 py-3 rounded-full"
             >
               Fale Conosco
             </a>
